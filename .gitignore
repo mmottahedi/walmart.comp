@@ -1,4 +1,6 @@
 .Rproj.user
 .Rhistory
 .RData
-.csv
+*.csv
+/zipped_files/*
+/data/*
