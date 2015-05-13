@@ -108,13 +108,12 @@ for(i in 2:dim(test.event.list)[2]) {
 #---------------------MAKE LEARNING DATASET-----------------------
 
 Test <- cbind(test,test.event.list2[,-1])
-
 Train <- cbind(train,event.list2[,-1])
 
+write.csv(Test,"./data/Test.csv",quote=FALSE,row.names=FALSE)
+write.csv(Train,"./data/Train.csv",quote=FALSE,row.names=FALSE)
 
-
-
-#event.vec <- apply(event.list[ttrain,],1,"|")
-Train <- as.matrix(Train)
-Train[,4] <- as.numeric(Train[,4])
-Train[,1] <- as.Date(Train[,1])
+# #event.vec <- apply(event.list[ttrain,],1,"|")
+# Train <- as.matrix(Train)
+# Train$units <- as.numeric(Train$units)
+# Train[,1] <- as.Date(Train[,1])
